@@ -4,7 +4,7 @@ How to know if 'auto heal' is enabled for all the site within the subscription
 
 Approach #1
 For all the web apps under the subscription, it needs only a subscription Id. Users having access issues may not be able to get the desired results.
-
+```
 _subscriptionId="<subid>"
 _webApps=$(az webapp list --subscription $_subscriptionId --query "[].{name:name, resourceGroup:resourceGroup}" --output jsonc)
 for item in $(echo "$_webApps" | jq -r '.[] | @base64'); do
@@ -15,7 +15,7 @@ for item in $(echo "$_webApps" | jq -r '.[] | @base64'); do
      _autoHealEnabled=$(az webapp config show --subscription $_subscriptionId --resource-group $_resourceGroup --name $_name --query "autoHealEnabled" --output tsv)
      echo "[{ Is_autoHealEnabled: $_autoHealEnabled  } { Web App: $_name} { Resource Group: $_resourceGroup }]"
 done
-
+```
 Approach #2 
 { Not recommended as it may put pressure on the server and your request may be throttled }
 F
