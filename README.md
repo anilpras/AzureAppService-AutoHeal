@@ -1,4 +1,4 @@
-# AzureAppService-Query AutoHeal for all the sites under a subscription
+# Fetch AutoHeal setting for sites belongs to a subscription
 How to know if 'auto heal' is enabled for all the site within the subscription
 
 
