@@ -3,6 +3,7 @@ How to know if 'auto heal' is enabled for all the site within the subscription
 
 
 **Approach #1**
+
 For all the web apps under the subscription, it needs only a subscription Id. Users having access issues may not be able to get the desired results.
 ```
 _subscriptionId="<subid>"
@@ -18,8 +19,9 @@ done
 ```
 
 **Approach #2**
-{ Not recommended as it may put pressure on the server and your request may be throttled }
-F or all the web apps and subscriptions under the account.  I would suggest using this cautiously as it will make many API requests to the backend. Users having access issues may not be able to get the desired results.
+{Not recommended as it may put pressure on the server and your request may be throttled }
+
+For all the web apps and subscriptions under the account.  I would suggest using this cautiously as it will make many API requests to the backend. Users having access issues may not be able to get the desired results.
 
 ```
 
